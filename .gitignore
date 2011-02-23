@@ -1,6 +1,5 @@
 .bundle
 .DS_Store
-Gemfile.lock
 db/*.sqlite3
 log/*.log
 tmp/
