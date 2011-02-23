@@ -1,0 +1,14 @@
+<h2>Eggs</h2>
+<h3>Why Eggs? Because they're delicious!</h3>
+
+<%= link_to "new egg", new_egg_path %>
+
+<ul>
+  <% if @eggs.empty? %>
+    <li>No eggs have been created!</li>
+  <% else %>
+    <% @eggs.each do |egg| %>
+      <li><%= egg.inspect %></li>
+    <% end %></ul>
+  <% end %>
+</ul>

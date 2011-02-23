@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Green Eggs and Spam Demo</title>
+  <%= stylesheet_link_tag 'styles' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1 class="title">Green Eggs &amp; Spam Demo</h1>
+    <%= link_to "play with eggs", eggs_path %> 
+    <%= link_to "send a comment", new_comment_path %>
+  </div>
+
+  <%= content_tag(:p, flash[:notice], :class => 'flash notice') if flash[:notice] %>
+  <%= content_tag(:p, flash[:error], :class => 'flash error') if flash[:error] %>
+
+  <%= yield %>
+
+</div>
+
+</body>
+</html>

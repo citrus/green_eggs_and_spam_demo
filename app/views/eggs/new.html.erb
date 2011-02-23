@@ -1,0 +1,20 @@
+<h2>New Egg</h2>
+
+<% if 0 < @egg.errors.to_a.length %>
+  <%= render 'shared/error_messages', :target => @egg %>
+<% end %>
+
+
+
+<%= form_for @egg do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %> 
+  </p>
+  <p>
+    <%= anti_spam_form %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %> 
